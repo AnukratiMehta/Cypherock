@@ -114,7 +114,7 @@ const Main = ({ wallets, handleSelectWallet }: Props) => {
                         <div className='flex sm:flex-row text-[18px]'>
                             <button className='text-purple mr-[10px] flex flex-row justify-center items-center' onClick={() => setShowPopup(true)}>
                                 <BsArrowDownLeft className='text-[14px] sm:mx-[8px] mx-[4px]' />
-                                Recieve
+                                Receive
                             </button>
                             {showPopup ? <Popup data={data} wallets={wallets} onSelectWallet={handleSelectWallet} onClose={onClose}/> : null}
                             <p className='font-thin text-grey'>|</p>

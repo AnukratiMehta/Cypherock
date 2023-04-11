@@ -27,7 +27,6 @@ select:not(:focus) {
   background-color: transparent; /* Keep the initial background color when the select element is not in focus */
 }
 
-select option::selection {
-  background-color: red;
-  color: white;
+.device-btn:hover {
+  background-color: #C78D4E !important;
 }

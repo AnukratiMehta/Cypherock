@@ -71,16 +71,14 @@ const Verification = ({handleContinueClick, randomStr, setRandomStr }: Props) =>
         <div className="flex flex-col mt-[30px] mb-[30px] w-3/12">
         <hr className="text-grey absolute left-0 right-0 m-0" />
         <button
-            onClick={handleContinueClick}
-              className={`text-[12px] mt-[30px] py-[10px] px-[30px] rounded-[5px] border border-grey border-1 == ${
-                inputValue === randomStr
-                  ? "bg-medium-orange text-white"
-                  : "opacity-50 cursor-not-allowed"
-              }`}
-              disabled={inputValue !== randomStr}
-            >
-              Continue
-            </button>
+  onClick={handleContinueClick}
+  className={`text-[12px] mt-[30px] hover:bg-dark-orange py-[10px] px-[30px] rounded-[5px] border border-grey border-1 ${
+    inputValue === randomStr && isVerified ? "bg-medium-orange text-white" : "opacity-50 cursor-not-allowed"
+  }`}
+  disabled={!(inputValue === randomStr && isVerified)}
+>
+  Continue
+</button>
             </div>
       </div>
     </div>

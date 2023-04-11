@@ -50,7 +50,7 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                 >
                     <div className="flex flex-row">
                         <BsArrowRight className="text-dark-orange mr-[10px] mt-[4px]" />
-                        Select the Wallet on Device
+                        Select the wallet on device
                     </div>
                     {selectedWallet && (
                         <AiOutlineCheck className="text-light-grey mr-[10px] mt-[2px]" />
@@ -73,7 +73,7 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                     <div className="flex flex-row">
 
                         <BsArrowRight className="text-dark-orange mr-[10px] mt-[4px]" />
-                        Select the Coin on device
+                        Select the coin on device
                     </div>
                     {selectedCoin && (
                         <AiOutlineCheck className="text-light-grey mr-[10px] mt-[2px]" />
@@ -87,7 +87,7 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                                 className="cursor-pointer hover:text-dark-orange"
                                 onClick={() => handleSelectCoin(coin)}
                             >
-                                {coin.name}
+                                {coin.name} - {coin.btc}
                             </div>
                         ))}
                     </div>
@@ -96,7 +96,7 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                 onClick={() => setShowCards(!showCards)}>
                     <div className="flex flex-row">
                         <BsArrowRight className="text-dark-orange mr-[10px] mt-[4px]" />
-                        Tap 1 card of any 4 Cards
+                        Tap 1 card of any 4 cards
                     </div>
                     {selectedCard && (
                         <AiOutlineCheck className="text-light-grey mr-[10px] mt-[2px]" />
@@ -117,16 +117,17 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
             </div>
             <div className="flex mt-[40px]">
                 <hr className="text-grey absolute left-0 right-0 m-0" />
-                <button className="ml-auto text-[12px] mt-[30px] py-[10px] px-[30px] rounded-[5px] border border-grey border-1"
-                    disabled={!selectedWallet || !selectedCoin || !selectedCard}
-                    style={{
-                        backgroundColor: !selectedWallet || !selectedCoin || !selectedCard ? "transparent" : "#785B3C",
-                        color: !selectedWallet || !selectedCoin || !selectedCard ? "#616161" : "white"
-                    }}
-                    onClick={handleContinueClick}
-                >
-                    Continue
-                </button>
+                <button className={`device-btn ml-auto text-[12px] mt-[30px] py-[10px] px-[30px] rounded-[5px] border border-grey border-1 ${(!selectedWallet || !selectedCoin || !selectedCard) ? 'opacity-50 cursor-not-allowed' : ''}`}
+  disabled={!selectedWallet || !selectedCoin || !selectedCard}
+  style={{
+    backgroundColor: !selectedWallet || !selectedCoin || !selectedCard ? "transparent" : "#785B3C",
+    color: !selectedWallet || !selectedCoin || !selectedCard ? "#616161" : "white"
+  }}
+  onClick={handleContinueClick}
+>
+  Continue
+</button>
+
             </div>
         </div>
     )

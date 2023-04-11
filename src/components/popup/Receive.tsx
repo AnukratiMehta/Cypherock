@@ -32,7 +32,7 @@ const Receive = ({handleReverifyClick, randomStr }: Props) => {
                 Address verified
             </div>
             <div className='flex justify-center items-center p-[40px]'>
-                <button className='text-rich-blue rounded-[5px] py-[10px] px-[40px] border border-1 border-rich-blue bg-transparent font-light text-[18px]' onClick={handleReverifyClick}>
+                <button className='text-rich-blue hover:bg-lighter-blue rounded-[5px] py-[10px] px-[40px] border border-1 border-rich-blue bg-transparent font-light text-[18px]' onClick={handleReverifyClick}>
                     Reverify
                 </button>
             </div>
