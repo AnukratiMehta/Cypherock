@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root, .App {
+overflow: auto;
+height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar a {
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #e7e7e7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select {
+  background-color: transparent; /* Set the initial background color to transparent */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+select:focus {
+  background-color: #161c23; /* Set the background color to yellow when the select element is in focus */
+}
+
+select:not(:focus) {
+  background-color: transparent; /* Keep the initial background color when the select element is not in focus */
+}
+
+select option::selection {
+  background-color: red;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

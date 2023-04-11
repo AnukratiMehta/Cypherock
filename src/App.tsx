@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import Main from './components/Main';
 
-function App() {
+const App = () => {
+  const [wallets, setWallets] = useState<string[]>([]);
+  const [selected, setSelected] = useState<string | null>(null);
+
+  const handleAddWallet = () => {
+    const walletName = prompt('Enter wallet name');
+    if (walletName) {
+      setWallets([...wallets, walletName]);
+    }
+  };
+
+  const handleSelectWallet = (wallet: string) => {
+    setSelected(wallet);
+
+    if (wallet) {
+      document.querySelector(".hr1")?.classList.add("border-dark-orange");
+      document.querySelector(".verification")?.classList.add("text-dark-orange");
+    } else {
+      document.querySelector(".hr1")?.classList.remove("border-dark-orange");
+      document.querySelector(".verification")?.classList.remove("text-dark-orange");
+    }
+    
+    console.log(`Selected wallet: ${wallet}`);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex flex-col bg-dark-blue">
+      <Header />
+      <div className='flex flex-row'>
+        <Sidebar wallets={wallets} handleAddWallet={handleAddWallet} />
+        <Main wallets={wallets} handleSelectWallet={handleSelectWallet} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
