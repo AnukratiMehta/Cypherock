@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Cypherock/static/css/main.868ea5c6.css",
-    "main.js": "/Cypherock/static/js/main.331e8d78.js",
+    "main.css": "/Cypherock/static/css/main.598c5773.css",
+    "main.js": "/Cypherock/static/js/main.936138aa.js",
     "static/js/787.ddd91f99.chunk.js": "/Cypherock/static/js/787.ddd91f99.chunk.js",
     "static/media/logo.svg": "/Cypherock/static/media/logo.8743fd1e93a80b20b13fcc1d189d9e95.svg",
     "index.html": "/Cypherock/index.html",
-    "main.868ea5c6.css.map": "/Cypherock/static/css/main.868ea5c6.css.map",
-    "main.331e8d78.js.map": "/Cypherock/static/js/main.331e8d78.js.map",
+    "main.598c5773.css.map": "/Cypherock/static/css/main.598c5773.css.map",
+    "main.936138aa.js.map": "/Cypherock/static/js/main.936138aa.js.map",
     "787.ddd91f99.chunk.js.map": "/Cypherock/static/js/787.ddd91f99.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.868ea5c6.css",
-    "static/js/main.331e8d78.js"
+    "static/css/main.598c5773.css",
+    "static/js/main.936138aa.js"
   ]
 }
