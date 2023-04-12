@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root, .App {
-overflow: auto;
-height: 100vh;
+html,
+body,
+#root,
+.App {
+  overflow: auto;
+  height: 100vh;
 }
 
 .sidebar a {
@@ -16,15 +19,18 @@ height: 100vh;
 }
 
 select {
-  background-color: transparent; /* Set the initial background color to transparent */
+  background-color: transparent;
+  /* Set the initial background color to transparent */
 }
 
 select:focus {
-  background-color: #161c23; /* Set the background color to yellow when the select element is in focus */
+  background-color: #161c23;
+  /* Set the background color to yellow when the select element is in focus */
 }
 
 select:not(:focus) {
-  background-color: transparent; /* Keep the initial background color when the select element is not in focus */
+  background-color: transparent;
+  /* Keep the initial background color when the select element is not in focus */
 }
 
 .device-btn:hover {

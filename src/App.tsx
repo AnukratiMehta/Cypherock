@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
@@ -25,7 +25,7 @@ const App = () => {
       document.querySelector(".hr1")?.classList.remove("border-dark-orange");
       document.querySelector(".verification")?.classList.remove("text-dark-orange");
     }
-    
+
     console.log(`Selected wallet: ${wallet}`);
   };
 

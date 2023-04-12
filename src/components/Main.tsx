@@ -11,8 +11,6 @@ import { FaEthereum } from 'react-icons/fa'
 
 import Popup from './popup/Popup';
 
-
-
 // Define an interface for the coin data
 export interface ICoin {
     name: string;
@@ -23,12 +21,10 @@ export interface ICoin {
     id: number
 }
 
-
 type Props = {
     wallets: string[];
     handleSelectWallet: (wallet: string) => void;
-  };
-
+};
 
 const Main = ({ wallets, handleSelectWallet }: Props) => {
     // Define the initial data and sorting option
@@ -42,7 +38,7 @@ const Main = ({ wallets, handleSelectWallet }: Props) => {
     const [sortOption, setSortOption] = useState<string>('amount-high-low');
 
     const [showPopup, setShowPopup] = useState(false);
-    
+
     const onClose = () => {
         setShowPopup(false);
     };
@@ -76,20 +72,19 @@ const Main = ({ wallets, handleSelectWallet }: Props) => {
                     <p className='text-lightest-orange m-[5px]'>Synchronized</p>
                 </div>
                 <div className='flex flex-row justify-center items-center'>
-                <div className='bg-blue flex justify-center items-center p-[8px] m-[10px] rounded-[3px]'><BsCircleHalf className='text-light-grey' /></div>
-                <div className='bg-blue flex justify-center items-center p-[8px] m-[10px] sm:mr-[40px] rounded-[3px]'><BiLockAlt className='text-lightest-orange' /></div>
+                    <div className='bg-blue flex justify-center items-center p-[8px] m-[10px] rounded-[3px]'><BsCircleHalf className='text-light-grey' /></div>
+                    <div className='bg-blue flex justify-center items-center p-[8px] m-[10px] sm:mr-[40px] rounded-[3px]'><BiLockAlt className='text-lightest-orange' /></div>
                 </div>
             </div>
             <div className='flex sm:flex-row sm:justify-between flex-col justify-center items-center'>
-                    <h1 className='text-dark-orange text-[20px] sm:m-[40px] m-[20px] font-bold'>Wallet 1</h1>
-                    <button className='bg-blue text-light-grey px-[25px] py-[5px] m-[20px] rounded-[5px] text-[14px] sm:m-[40px]'>+ Add Coin</button>
+                <h1 className='text-dark-orange text-[20px] sm:m-[40px] m-[20px] font-bold'>Wallet 1</h1>
+                <button className='bg-blue text-light-grey px-[25px] py-[5px] m-[20px] rounded-[5px] text-[14px] sm:m-[40px]'>+ Add Coin</button>
             </div>
             <div className='flex md:flex-row sm:justify-between flex-col justify-center items-center border m-[40px] px-[30px] py-[15px] border-1 border-solid border-lighter-blue'>
                 <p className='text-[12px] text-light-grey'>
                     Total Coins - {data.length}
                 </p>
                 <div>
-
                     <select
                         className='text-light-grey bg-dark-blue text-[12px] p-[5px] sm:mt-[0] mt-[5px] select-element'
                         value={sortOption}
@@ -116,7 +111,7 @@ const Main = ({ wallets, handleSelectWallet }: Props) => {
                                 <BsArrowDownLeft className='text-[14px] sm:mx-[8px] mx-[4px]' />
                                 Receive
                             </button>
-                            {showPopup ? <Popup data={data} wallets={wallets} onSelectWallet={handleSelectWallet} onClose={onClose}/> : null}
+                            {showPopup ? <Popup data={data} wallets={wallets} onSelectWallet={handleSelectWallet} onClose={onClose} /> : null}
                             <p className='font-thin text-grey'>|</p>
                             <button className='text-lightest-orange sm:ml-[10px] flex flex-row justify-center items-center'>
                                 <BsArrowUpRight className='text-[14px] sm:mx-[8px] mx-[4px]' />

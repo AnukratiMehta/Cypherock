@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import { BsArrowRight } from "react-icons/bs";
 import { AiOutlineCheck } from 'react-icons/ai'
 
@@ -45,7 +46,7 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                 Follow the instructions on the device
             </div>
             <div className="w-full flex justify-center items-center flex-col">
-            <button className={`bg-light-blue m-[10px] ${!selectedWallet ? 'text-light-grey' : 'text-purple'} p-[10px] flex flex-row justify-between items-center rounded-[15px] text-[14px] font-light w-full`} 
+                <button className={`bg-light-blue m-[10px] ${!selectedWallet ? 'text-light-grey' : 'text-purple'} p-[10px] flex flex-row justify-between items-center rounded-[15px] text-[14px] font-light w-full`}
                     onClick={() => setShowWallets(!showWallets)}
                 >
                     <div className="flex flex-row">
@@ -68,8 +69,8 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                         ))}
                     </div>
                 )}
-                <button className={`bg-light-blue m-[10px] ${!selectedCoin ? 'text-light-grey' : 'text-purple'} p-[10px] flex flex-row justify-between items-center rounded-[15px] text-[14px] font-light w-full`} 
-                onClick={() => setShowCoins(!showCoins)}>
+                <button className={`bg-light-blue m-[10px] ${!selectedCoin ? 'text-light-grey' : 'text-purple'} p-[10px] flex flex-row justify-between items-center rounded-[15px] text-[14px] font-light w-full`}
+                    onClick={() => setShowCoins(!showCoins)}>
                     <div className="flex flex-row">
 
                         <BsArrowRight className="text-dark-orange mr-[10px] mt-[4px]" />
@@ -92,8 +93,8 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
                         ))}
                     </div>
                 )}
-                <button className={`bg-light-blue m-[10px] ${!selectedCard ? 'text-light-grey' : 'text-purple'} p-[10px] flex flex-row justify-between items-center rounded-[15px] text-[14px] font-light w-full`} 
-                onClick={() => setShowCards(!showCards)}>
+                <button className={`bg-light-blue m-[10px] ${!selectedCard ? 'text-light-grey' : 'text-purple'} p-[10px] flex flex-row justify-between items-center rounded-[15px] text-[14px] font-light w-full`}
+                    onClick={() => setShowCards(!showCards)}>
                     <div className="flex flex-row">
                         <BsArrowRight className="text-dark-orange mr-[10px] mt-[4px]" />
                         Tap 1 card of any 4 cards
@@ -118,15 +119,15 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
             <div className="flex mt-[40px]">
                 <hr className="text-grey absolute left-0 right-0 m-0" />
                 <button className={`device-btn ml-auto text-[12px] mt-[30px] py-[10px] px-[30px] rounded-[5px] border border-grey border-1 ${(!selectedWallet || !selectedCoin || !selectedCard) ? 'opacity-50 cursor-not-allowed' : ''}`}
-  disabled={!selectedWallet || !selectedCoin || !selectedCard}
-  style={{
-    backgroundColor: !selectedWallet || !selectedCoin || !selectedCard ? "transparent" : "#785B3C",
-    color: !selectedWallet || !selectedCoin || !selectedCard ? "#616161" : "white"
-  }}
-  onClick={handleContinueClick}
->
-  Continue
-</button>
+                    disabled={!selectedWallet || !selectedCoin || !selectedCard}
+                    style={{
+                        backgroundColor: !selectedWallet || !selectedCoin || !selectedCard ? "transparent" : "#785B3C",
+                        color: !selectedWallet || !selectedCoin || !selectedCard ? "#616161" : "white"
+                    }}
+                    onClick={handleContinueClick}
+                >
+                    Continue
+                </button>
 
             </div>
         </div>

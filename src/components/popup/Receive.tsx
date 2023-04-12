@@ -1,12 +1,12 @@
-import {AiOutlineInfoCircle} from 'react-icons/ai'
 import { useState } from 'react';
+import { AiOutlineInfoCircle } from 'react-icons/ai'
 
 type Props = {
     handleReverifyClick: () => void;
     randomStr: string;
 };
 
-const Receive = ({handleReverifyClick, randomStr }: Props) => {
+const Receive = ({ handleReverifyClick, randomStr }: Props) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopyClick = () => {
@@ -28,7 +28,7 @@ const Receive = ({handleReverifyClick, randomStr }: Props) => {
                 </button>
             </div>
             <div className='text-rich-blue m-[15px] text-[16px] font-light flex flex-row items-center'>
-                <AiOutlineInfoCircle className='mx-[10px]'/>
+                <AiOutlineInfoCircle className='mx-[10px]' />
                 Address verified
             </div>
             <div className='flex justify-center items-center p-[40px]'>
@@ -37,7 +37,7 @@ const Receive = ({handleReverifyClick, randomStr }: Props) => {
                 </button>
             </div>
             <div className='pb-[50px]'>
-            <hr className="text-grey absolute left-0 right-0 m-0" />
+                <hr className="text-grey absolute left-0 right-0 m-0" />
             </div>
         </div>
     )

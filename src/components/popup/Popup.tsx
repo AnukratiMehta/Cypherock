@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { TbCircle1Filled } from "react-icons/tb";
 import { TbCircle2Filled } from "react-icons/tb";
@@ -23,7 +23,6 @@ const Popup = ({ wallets, onSelectWallet, data, onClose }: Props) => {
     const [showReceive, setShowReceive] = useState(false);
     const [reverifyClicked, setReverifyClicked] = useState(false);
     const [randomStr, setRandomStr] = useState("");
-
 
     const handleContinueClick = () => {
         if (showVerification || reverifyClicked) {
@@ -62,10 +61,10 @@ const Popup = ({ wallets, onSelectWallet, data, onClose }: Props) => {
             </div>
             <div className="w-full">
                 {showReceive ? (
-                    <Receive handleReverifyClick={handleReverifyClick} randomStr={randomStr}/>
+                    <Receive handleReverifyClick={handleReverifyClick} randomStr={randomStr} />
                 ) : showVerification ? (
                     <Verification handleContinueClick={handleContinueClick} randomStr={randomStr}
-                    setRandomStr={setRandomStr}/>
+                        setRandomStr={setRandomStr} />
                 ) : (
                     <Device
                         data={data}
