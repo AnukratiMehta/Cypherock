@@ -7,12 +7,11 @@ import { ICoin } from '../Main'
 
 type Props = {
     wallets: string[];
-    onSelectWallet: (wallet: string) => void;
     data: ICoin[];
     handleContinueClick: () => void;
 };
 
-const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) => {
+const Device = ({ wallets, data, handleContinueClick }: Props) => {
 
     const [showWallets, setShowWallets] = useState(false);
     const [showCoins, setShowCoins] = useState(false);
@@ -24,8 +23,6 @@ const Device = ({ wallets, onSelectWallet, data, handleContinueClick }: Props) =
     const handleSelectWallet = (wallet: string) => {
         setSelectedWallet(wallet);
         setShowWallets(false);
-        onSelectWallet(wallet);
-
     };
 
     const handleSelectCoin = (coin: any) => {

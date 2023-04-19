@@ -15,26 +15,12 @@ const App = () => {
     }
   };
 
-  const handleSelectWallet = (wallet: string) => {
-    setSelected(wallet);
-
-    if (wallet) {
-      document.querySelector(".hr1")?.classList.add("border-dark-orange");
-      document.querySelector(".verification")?.classList.add("text-dark-orange");
-    } else {
-      document.querySelector(".hr1")?.classList.remove("border-dark-orange");
-      document.querySelector(".verification")?.classList.remove("text-dark-orange");
-    }
-
-    console.log(`Selected wallet: ${wallet}`);
-  };
-
   return (
     <div className="App flex flex-col bg-dark-blue">
       <Header />
       <div className='flex flex-row'>
         <Sidebar wallets={wallets} handleAddWallet={handleAddWallet} />
-        <Main wallets={wallets} handleSelectWallet={handleSelectWallet} />
+        <Main wallets={wallets} />
       </div>
     </div>
   );

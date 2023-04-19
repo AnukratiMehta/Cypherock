@@ -23,10 +23,9 @@ export interface ICoin {
 
 type Props = {
     wallets: string[];
-    handleSelectWallet: (wallet: string) => void;
 };
 
-const Main = ({ wallets, handleSelectWallet }: Props) => {
+const Main = ({ wallets }: Props) => {
     // Define the initial data and sorting option
     const [data, setData] = useState<ICoin[]>([
         { id: 1, name: 'Bitcoin', btc: 0.002900, usd: 0.528, icon: <BsCurrencyBitcoin />, color: 'dark-orange' },
@@ -111,7 +110,7 @@ const Main = ({ wallets, handleSelectWallet }: Props) => {
                                 <BsArrowDownLeft className='text-[14px] sm:mx-[8px] mx-[4px]' />
                                 Receive
                             </button>
-                            {showPopup ? <Popup data={data} wallets={wallets} onSelectWallet={handleSelectWallet} onClose={onClose} /> : null}
+                            {showPopup ? <Popup data={data} wallets={wallets} onClose={onClose} /> : null}
                             <p className='font-thin text-grey'>|</p>
                             <button className='text-lightest-orange sm:ml-[10px] flex flex-row justify-center items-center'>
                                 <BsArrowUpRight className='text-[14px] sm:mx-[8px] mx-[4px]' />

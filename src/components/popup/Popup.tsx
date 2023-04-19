@@ -13,12 +13,11 @@ import { ICoin } from '../Main'
 
 type Props = {
     wallets: string[];
-    onSelectWallet: (wallet: string) => void;
     data: ICoin[];
     onClose: () => void;
 };
 
-const Popup = ({ wallets, onSelectWallet, data, onClose }: Props) => {
+const Popup = ({ wallets, data, onClose }: Props) => {
     const [showVerification, setShowVerification] = useState(false);
     const [showReceive, setShowReceive] = useState(false);
     const [reverifyClicked, setReverifyClicked] = useState(false);
@@ -69,7 +68,6 @@ const Popup = ({ wallets, onSelectWallet, data, onClose }: Props) => {
                     <Device
                         data={data}
                         wallets={wallets}
-                        onSelectWallet={onSelectWallet}
                         handleContinueClick={handleContinueClick}
                     />
                 )}

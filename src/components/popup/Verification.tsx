@@ -32,15 +32,6 @@ const Verification = ({ handleContinueClick, randomStr, setRandomStr }: Props) =
     setInputValue(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (inputValue === randomStr) {
-      console.log("Verification successful!");
-    } else {
-      console.log("Verification failed!");
-    }
-  };
-
   return (
     <div>
       <div className="bg-light-blue rounded-[5px] w-full border border-dashed border-light-grey p-[40px] text-dark-orange text-[20px]">
@@ -58,7 +49,7 @@ const Verification = ({ handleContinueClick, randomStr, setRandomStr }: Props) =
           Please match the address to be shown in X1 Wallet
         </button>
         {isVerified && (
-          <form onSubmit={handleSubmit}>
+          <form >
             <input
               type="text"
               value={inputValue}
