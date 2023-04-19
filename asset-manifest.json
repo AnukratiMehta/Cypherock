@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Cypherock/static/css/main.d70e1d93.css",
-    "main.js": "/Cypherock/static/js/main.5b63f2a5.js",
+    "main.js": "/Cypherock/static/js/main.19f4a67a.js",
     "static/js/787.ddd91f99.chunk.js": "/Cypherock/static/js/787.ddd91f99.chunk.js",
     "static/media/logo.svg": "/Cypherock/static/media/logo.8743fd1e93a80b20b13fcc1d189d9e95.svg",
     "index.html": "/Cypherock/index.html",
     "main.d70e1d93.css.map": "/Cypherock/static/css/main.d70e1d93.css.map",
-    "main.5b63f2a5.js.map": "/Cypherock/static/js/main.5b63f2a5.js.map",
+    "main.19f4a67a.js.map": "/Cypherock/static/js/main.19f4a67a.js.map",
     "787.ddd91f99.chunk.js.map": "/Cypherock/static/js/787.ddd91f99.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d70e1d93.css",
-    "static/js/main.5b63f2a5.js"
+    "static/js/main.19f4a67a.js"
   ]
 }
