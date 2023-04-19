@@ -6,7 +6,6 @@ import Main from './components/Main';
 
 const App = () => {
   const [wallets, setWallets] = useState<string[]>([]);
-  const [selected, setSelected] = useState<string | null>(null);
 
   const handleAddWallet = () => {
     const walletName = prompt('Enter wallet name');
